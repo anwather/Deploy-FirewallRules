@@ -1,0 +1,106 @@
+{
+    "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+    "action": {
+        "type": "Allow"
+    },
+    "rules": [
+        {
+            "ruleType": "NetworkRule",
+            "name": "allow-kms-server",
+            "ipProtocols": [
+                "TCP"
+            ],
+            "sourceAddresses": [
+                "*"
+            ],
+            "sourceIpGroups": [],
+            "destinationAddresses": [
+                "23.102.135.246"
+            ],
+            "destinationIpGroups": [],
+            "destinationFqdns": [],
+            "destinationPorts": [
+                "1688"
+            ]
+        },
+        {
+            "ruleType": "NetworkRule",
+            "name": "allow-autmation-storage-SouthCentralUS",
+            "ipProtocols": [
+                "TCP"
+            ],
+            "sourceAddresses": [
+                "*"
+            ],
+            "sourceIpGroups": [],
+            "destinationAddresses": [
+                "13.65.107.32/28"
+            ],
+            "destinationIpGroups": [],
+            "destinationFqdns": [],
+            "destinationPorts": [
+                "443"
+            ]
+        },
+        {
+            "ruleType": "NetworkRule",
+            "name": "allow-azure-storage_australiasoutheast",
+            "ipProtocols": [
+                "TCP"
+            ],
+            "sourceAddresses": [
+                "*"
+            ],
+            "sourceIpGroups": [],
+            "destinationAddresses": [
+                "Storage.AustraliaSoutheast"
+            ],
+            "destinationIpGroups": [],
+            "destinationFqdns": [],
+            "destinationPorts": [
+                "443"
+            ]
+        },
+        {
+            "ruleType": "NetworkRule",
+            "name": "allow-azure-monitor",
+            "ipProtocols": [
+                "TCP"
+            ],
+            "sourceAddresses": [
+                "*"
+            ],
+            "sourceIpGroups": [],
+            "destinationAddresses": [
+                "AzureMonitor"
+            ],
+            "destinationIpGroups": [],
+            "destinationFqdns": [],
+            "destinationPorts": [
+                "443"
+            ]
+        },
+        {
+            "ruleType": "NetworkRule",
+            "name": "allow-azure-storge-australiacentral1",
+            "ipProtocols": [
+                "TCP"
+            ],
+            "sourceAddresses": [
+                "*"
+            ],
+            "sourceIpGroups": [],
+            "destinationAddresses": [
+                "Storage.AustraliaCentral",
+                "Storage.AustraliaCentral2"
+            ],
+            "destinationIpGroups": [],
+            "destinationFqdns": [],
+            "destinationPorts": [
+                "443"
+            ]
+        }
+    ],
+    "name": "allow-network-rules",
+    "priority": 100
+}

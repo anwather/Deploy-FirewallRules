@@ -1,0 +1,32 @@
+{
+    "ruleCollectionType": "FirewallPolicyFilterRuleCollection",
+    "action": {
+        "type": "Allow"
+    },
+    "rules": [
+        {
+            "ruleType": "ApplicationRule",
+            "name": "allow-azure-automation",
+            "protocols": [
+                {
+                    "protocolType": "Https",
+                    "port": 443
+                }
+            ],
+            "fqdnTags": [],
+            "webCategories": [],
+            "targetFqdns": [
+                "*.azure-autmation.net"
+            ],
+            "targetUrls": [],
+            "terminateTLS": false,
+            "sourceAddresses": [
+                "*"
+            ],
+            "destinationAddresses": [],
+            "sourceIpGroups": []
+        }
+    ],
+    "name": "allow-app-rules",
+    "priority": 100
+}
